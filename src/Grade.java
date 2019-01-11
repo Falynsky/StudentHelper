@@ -1,13 +1,26 @@
-public class Grade {
+public class Grade extends Subject{
 
-    int grade = 0;
+    double grade = 0;
     String forWhat ="";
 
-    public void setGrade(int grade) {
+    Grade(double grade, String forWhat){
+        setForWhat(forWhat);
+        setGrade(grade);
+    }
+
+    public void setGrade(double grade) {
         this.grade = grade;
     }
 
     public void setForWhat(String forWhat) {
         this.forWhat = forWhat;
+    }
+
+    public double getGrade() {
+        return grade;
+    }
+
+    public String getForWhat() {
+        return forWhat;
     }
 }
