@@ -8,7 +8,7 @@ My goal is to create the perfect app for students. One that will be a combinatio
 
 This app is not perfect right now, but I'm working on it. The program will be developing along with it the development of programming skills, so brave yourself :)
 
-The closest goals:
+Next goals:
   - Serialization (Maybe JSON)
   - More clean code
   - JUnit
