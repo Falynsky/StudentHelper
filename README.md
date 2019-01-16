@@ -11,3 +11,4 @@ This app is not perfect right now, but I'm working on it. The program will be de
 Closest plans:
   - Serialization (Maybe JSON)
   - More clean code
+  - JUnit
