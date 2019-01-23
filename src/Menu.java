@@ -1,3 +1,5 @@
+import java.util.IllegalFormatException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
@@ -46,8 +48,13 @@ public class Menu {
                     System.out.println("for what:   ");
                     String forWhat = scan.nextLine();
                     System.out.println("type: ");
+                    try{
                     String type = scan.nextLine();
                     classbook.addGrade(subjectName, grade, forWhat, type);
+                    }
+                    catch (InputMismatchException e) {
+                    System.out.println("Bledny format...");
+                }
                     break;
 
                 case 0:
