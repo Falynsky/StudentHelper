@@ -9,9 +9,9 @@ public class Subject extends Classbook {
     private String room = "";
 
     Subject() {
-        setName(null);
-        setRoom(null);
-        setLecturer(null);
+        setName("Subject");
+        setRoom("RoomNumber");
+        setLecturer("Lecturer");
     }
 
     Subject(String name, String lecturer, String room) {
