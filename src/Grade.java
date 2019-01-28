@@ -1,4 +1,4 @@
-public class Grade extends Subject {
+public class Grade{
 
     double grade = 0;
     String forWhat = "";

@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Subject extends Classbook {
+public class Subject{
 
     Map<String, Grade> grades = new HashMap<>();
     private String name = "";

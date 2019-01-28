@@ -12,7 +12,7 @@ public class Menu {
         int choose;
         do {
             System.out.println("What're You need? \n\t 1. Show my grades from... \n\t" +
-                    " 2. Show my all grades\n\t 3. Add new subject\n\t 4. Add a new grade");
+                    " 2. Show my all grades\n\t 3. Add new subject\n\t 4. Add a new grade\n\t 0. Exit");
 
             choose = Integer.parseInt(scan.nextLine());
 

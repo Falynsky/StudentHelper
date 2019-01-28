@@ -5,23 +5,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GradeTest {
 
-    Grade grade;
+    Grade kolos1;
     @BeforeEach
     void setUp() {
-        grade = new Grade(5,"Calki");
+        kolos1 = new Grade(5,"Konwersja");
     }
     @Test
     void getGrade() {
-        assertEquals(5,grade.getGrade());
+        assertEquals(5,kolos1.getGrade());
     }
 
     @Test
     void gradeNotNull() {
-        assertNotNull(grade);
+        assertNotNull(kolos1);
     }
 
     @Test
     void getForWhat() {
-        assertEquals("Calki",grade.getForWhat());
+        assertEquals("Calki",kolos1.getForWhat());
     }
 }
