@@ -1,7 +1,9 @@
+package Classbook;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class Subject{
+public class Subject {
 
     Map<String, Grade> grades = new HashMap<>();
     private String name = "";
@@ -9,7 +11,7 @@ public class Subject{
     private String room = "";
 
     Subject() {
-        setName("Subject");
+        setName("Classbook.Subject");
         setRoom("RoomNumber");
         setLecturer("Lecturer");
     }
@@ -25,7 +27,10 @@ public class Subject{
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.isEmpty() || name == null) throw new NullPointerException();
+        else {
+            this.name = name;
+        }
     }
 
     public String getRoom() {
@@ -33,7 +38,10 @@ public class Subject{
     }
 
     public void setRoom(String room) {
-        this.room = room;
+        if (room.isEmpty() || room == null) throw new NullPointerException();
+        else {
+            this.room = room;
+        }
     }
 
     public String getLecturer() {
@@ -41,12 +49,15 @@ public class Subject{
     }
 
     public void setLecturer(String lecturer) {
-        this.lecturer = lecturer;
+        if (lecturer.isEmpty() || lecturer == null) throw new IllegalArgumentException();
+        else {
+            this.lecturer = lecturer;
+        }
     }
 
     public void getGrades() {
         for (Map.Entry<String, Grade> p : grades.entrySet()) {
-            System.out.println("\tType of Grade: " + p.getKey() + "\tGrade: " + p.getValue().getGrade() + "\tFor What: " + p.getValue().getForWhat());
+            System.out.println("\tType of Classbook.Grade: " + p.getKey() + "\tClassbook.Grade: " + p.getValue().getGrade() + "\tFor What: " + p.getValue().getForWhat());
         }
     }
 

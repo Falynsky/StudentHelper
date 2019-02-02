@@ -1,24 +1,33 @@
-import java.util.IllegalFormatException;
+package Classbook;
+
+import Classbook.Classbook;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
 
     static Classbook classbook = new Classbook();
+    static Notepad.Menu noteMenu = new Notepad.Menu();
     Scanner scan = new Scanner(System.in);
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 
     public void start() {
 
         int choose;
         do {
-            System.out.println("What're You need? \n\t 1. Show my grades from... \n\t" +
-                    " 2. Show my all grades\n\t 3. Add new subject\n\t 4. Add a new grade\n\t 0. Exit");
+            System.out.println("What You need? \n\t 1. Show my grades from... \n\t" +
+                    " 2. Show my all grades\n\t 3. Add new subject\n\t 4. Add a new grade\n\t 5. Show my Notepad\n\t 0. Exit");
 
             choose = Integer.parseInt(scan.nextLine());
 
             switch (choose) {
 
-                case 1: //printAllSubjects();
+                case 1:
                     System.out.println("Which subject are you interested in?\n\t");
                     String selectedSubject = scan.nextLine();
                     classbook.getGrades(selectedSubject);
@@ -56,6 +65,11 @@ public class Menu {
                     System.out.println("Bledny format...");
                 }
                     break;
+                case 5:
+                    clearScreen();
+                    noteMenu.start();
+                    break;
+
 
                 case 0:
                     System.out.println("Bye bye...");

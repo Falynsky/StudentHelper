@@ -1,11 +1,13 @@
-public class Grade{
+package Classbook;
+
+public class Grade {
 
     double grade = 0;
     String forWhat = "";
 
     Grade(double grade, String forWhat) {
-        setForWhat(forWhat);
         setGrade(grade);
+        setForWhat(forWhat);
     }
 
     public double getGrade() {
@@ -13,7 +15,10 @@ public class Grade{
     }
 
     public void setGrade(double grade) {
-        this.grade = grade;
+        if (grade < 2) throw new IllegalArgumentException();
+        else {
+            this.grade = grade;
+        }
     }
 
     public String getForWhat() {
@@ -21,6 +26,9 @@ public class Grade{
     }
 
     public void setForWhat(String forWhat) {
-        this.forWhat = forWhat;
+        if (forWhat.isEmpty() || forWhat == null) throw new NullPointerException();
+        else {
+            this.forWhat = forWhat;
+        }
     }
 }
