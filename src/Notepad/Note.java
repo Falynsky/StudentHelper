@@ -2,42 +2,42 @@ package Notepad;
 
 import java.time.LocalDate;
 
-public class Note {
+class Note {
 
     private String title;
     private String note;
     private LocalDate date;
 
-    public Note(String title, String note){
+    Note(String title, String note){
     setTitle(title);
     setNote(note);
     setDate();
     }
-    public void setDate() {
+    private void setDate() {
         this.date = LocalDate.now();
     }
 
-    public LocalDate getDate() {
+    LocalDate getDate() {
         return date;
     }
 
-    public String getNote() {
+    String getNote() {
         return note;
     }
 
-    public void setNote(String note) {
-        if (note.isEmpty() || note == null) throw new IllegalArgumentException();
+    private void setNote(String note) {
+        if (note.isEmpty()) throw new IllegalArgumentException();
         else {
             this.note = note;
         }
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        if (title.isEmpty() || title == null) throw new IllegalArgumentException();
+    private void setTitle(String title) {
+        if (title.isEmpty()) throw new IllegalArgumentException();
         {
             this.title = title;
         }

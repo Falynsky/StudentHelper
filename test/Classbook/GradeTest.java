@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GradeTest {
 
-    Grade kolos1;
+    private Grade kolos1;
     @BeforeEach
     void setUp() {
         kolos1 = new Grade(5,"Konwersja");

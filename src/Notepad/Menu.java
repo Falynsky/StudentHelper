@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Menu {
 
-    final static String enter = "\n";
+    private final static String enter = "\n";
     /*
         1. Dodaj nową notatkę
         2. Edytuj notatkę
         3. Usuń notaktę
      */
-    static Scanner scan = new Scanner(System.in);
-    Notepad notepad = new Notepad();
+    private static Scanner scan = new Scanner(System.in);
+    private Notepad notepad = new Notepad();
 
     public void start() {
 
@@ -33,8 +33,8 @@ public class Menu {
                     while (!newLine.equals("END")) {
                         newLine = scan.nextLine();
                         if (!newLine.equals("END")) {
-                            note += newLine;
-                            note += enter;
+                            note = note.concat(newLine);
+                            note = note.concat(enter);
                         }
                     }
                     notepad.addNote(title, note);

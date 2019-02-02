@@ -2,15 +2,10 @@ package Classbook;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class SubjectTest {
-    Subject wdi;
-    Map<String, Grade> grades = new HashMap<>();
+    private Subject wdi;
     @BeforeEach
     void setUp() {
         wdi = new Subject();

@@ -1,17 +1,15 @@
 package Classbook;
 
-import Classbook.Classbook;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
 
-    static Classbook classbook = new Classbook();
-    static Notepad.Menu noteMenu = new Notepad.Menu();
-    Scanner scan = new Scanner(System.in);
+    private static Classbook classbook = new Classbook();
+    private static Notepad.Menu noteMenu = new Notepad.Menu();
+    private Scanner scan = new Scanner(System.in);
 
-    public static void clearScreen() {
+    private static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }

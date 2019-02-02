@@ -1,32 +1,32 @@
 package Classbook;
 
-public class Grade {
+class Grade {
 
-    double grade = 0;
-    String forWhat = "";
+    private double grade = 0;
+    private String forWhat = "";
 
     Grade(double grade, String forWhat) {
         setGrade(grade);
         setForWhat(forWhat);
     }
 
-    public double getGrade() {
+    double getGrade() {
         return grade;
     }
 
-    public void setGrade(double grade) {
+    private void setGrade(double grade) {
         if (grade < 2) throw new IllegalArgumentException();
         else {
             this.grade = grade;
         }
     }
 
-    public String getForWhat() {
+    String getForWhat() {
         return forWhat;
     }
 
-    public void setForWhat(String forWhat) {
-        if (forWhat.isEmpty() || forWhat == null) throw new NullPointerException();
+    private void setForWhat(String forWhat) {
+        if (forWhat.isEmpty()) throw new NullPointerException();
         else {
             this.forWhat = forWhat;
         }

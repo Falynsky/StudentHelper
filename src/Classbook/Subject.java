@@ -3,9 +3,9 @@ package Classbook;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Subject {
+class Subject {
 
-    Map<String, Grade> grades = new HashMap<>();
+    private Map<String, Grade> grades = new HashMap<>();
     private String name = "";
     private String lecturer = "";
     private String room = "";
@@ -22,46 +22,46 @@ public class Subject {
         setName(name);
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        if (name.isEmpty() || name == null) throw new NullPointerException();
+    void setName(String name) {
+        if (name.isEmpty()) throw new NullPointerException();
         else {
             this.name = name;
         }
     }
 
-    public String getRoom() {
+    String getRoom() {
         return room;
     }
 
-    public void setRoom(String room) {
-        if (room.isEmpty() || room == null) throw new NullPointerException();
+    void setRoom(String room) {
+        if (room.isEmpty()) throw new NullPointerException();
         else {
             this.room = room;
         }
     }
 
-    public String getLecturer() {
+    String getLecturer() {
         return lecturer;
     }
 
-    public void setLecturer(String lecturer) {
-        if (lecturer.isEmpty() || lecturer == null) throw new IllegalArgumentException();
+    void setLecturer(String lecturer) {
+        if (lecturer.isEmpty()) throw new IllegalArgumentException();
         else {
             this.lecturer = lecturer;
         }
     }
 
-    public void getGrades() {
+    void getGrades() {
         for (Map.Entry<String, Grade> p : grades.entrySet()) {
             System.out.println("\tType of Classbook.Grade: " + p.getKey() + "\tClassbook.Grade: " + p.getValue().getGrade() + "\tFor What: " + p.getValue().getForWhat());
         }
     }
 
-    public void addGrade(double grade, String forWhat, String name) {
+    void addGrade(double grade, String forWhat, String name) {
         Grade newGrade = new Grade(grade, forWhat);
         grades.put(name, newGrade);
     }
